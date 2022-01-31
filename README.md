@@ -6,6 +6,10 @@ The only library that will be required to create python calculator project is th
 
 This library comes pre-installed with python, so you won’t have to worry about installing it.
 
+Only install tkinter
+
+		sudo apt-get install python3-tk
+
 
 ## Calculator Program File Structure
 
