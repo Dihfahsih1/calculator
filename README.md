@@ -20,3 +20,5 @@ Defining the functions of adding text and performing the calculations.
 Creating and placing the numbers, operators, equal sign, all clear, and clear buttons.
 
 Creating the final OK button.
+
+![Alt text](/calculator.png?raw=true "Python Calculator")
