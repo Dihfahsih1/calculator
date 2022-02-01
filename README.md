@@ -1,6 +1,6 @@
 # Implementing a calculator in python
 
-## Project Prerequisites
+## Basic Calculator
 
 The only library that will be required to create python calculator project is the tkinter library, which we will use to create the GUI.
 
@@ -25,4 +25,13 @@ Creating and placing the numbers, operators, equal sign, all clear, and clear bu
 
 Creating the final OK button.
 
-![Alt text](/calculator.png?raw=true "Python Calculator")
+![Alt text](/calculator.png?raw=true "Basic Calculator")
+
+
+## Scientific Calculator
+
+		smart_cal.py
+
+This module contains code for implementation of a scientific calculator
+
+![Alt text](/smart-calc.png?raw=true "Scientific Calculator")

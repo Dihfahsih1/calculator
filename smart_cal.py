@@ -9,6 +9,8 @@ root.geometry("650x400+300+300")
 root.title("Scientific Calculator")
 root.configure(background='LightCyan2')
 
+Label(root, text="Scientific Calculator", font=("Comic San Ms",15),bg=('LightCyan2')).place(x=25,y=0)
+
 switch = None
 
 # Button on press
