@@ -10,12 +10,16 @@ root.geometry("650x400+300+300")
 #root.iconbitmap(True, "images/icon.ico")
 root.title("Scientific Calculator")
 root.configure(background='LightCyan2')
+entry_strvar = StringVar(root)
 
 Label(root, text="Scientific Calculator", font=("Comic San Ms",15),bg=('LightCyan2')).place(x=25,y=0)
 
 switch = None
 
 # Button on press
+
+def add_text(text, strvar:StringVar):
+  strvar.set(f'{strvar.get()}{text}')
 '''don't allow any other keys except for numbers'''
 def keybind(self,event):
   v = event.char
@@ -331,7 +335,7 @@ def btneq_clicked(*args):
 
 
 
-disp = Entry(root, font="Verdana 20", fg="black", bg="#abbab1", bd=0, justify=RIGHT, insertbackground="#abbab1", cursor="arrow", command=keybind)
+disp = Entry(root, font="Verdana 20", fg="black", bg="#abbab1", bd=0, justify=RIGHT, insertbackground="#abbab1", cursor="arrow")
 disp.bind("<Return>", btneq_clicked)
 disp.bind("<Escape>", btnc_clicked)
 disp.bind("<Key-1>", key_event)
