@@ -1,10 +1,12 @@
+from ast import Break
+from distutils import command
 from tkinter import *
 import tkinter.messagebox
 import math
 
 
 root = Tk()
-root.geometry("650x400+300+300")
+root.geometry("650x400+300+300")          
 #root.iconbitmap(True, "images/icon.ico")
 root.title("Scientific Calculator")
 root.configure(background='LightCyan2')
@@ -14,8 +16,15 @@ Label(root, text="Scientific Calculator", font=("Comic San Ms",15),bg=('LightCya
 switch = None
 
 # Button on press
-
-
+'''don't allow any other keys except for numbers'''
+def keybind(self,event):
+  v = event.char
+  try:
+    v = int(v)
+  except ValueError:
+    if v!="\x08" and v!="":
+      return "break"
+    
 def btn1_clicked():
     if disp.get() == '0':
         disp.delete(0, END)
@@ -322,7 +331,7 @@ def btneq_clicked(*args):
 
 
 
-disp = Entry(root, font="Verdana 20", fg="black", bg="#abbab1", bd=0, justify=RIGHT, insertbackground="#abbab1", cursor="arrow")
+disp = Entry(root, font="Verdana 20", fg="black", bg="#abbab1", bd=0, justify=RIGHT, insertbackground="#abbab1", cursor="arrow", command=keybind)
 disp.bind("<Return>", btneq_clicked)
 disp.bind("<Escape>", btnc_clicked)
 disp.bind("<Key-1>", key_event)
